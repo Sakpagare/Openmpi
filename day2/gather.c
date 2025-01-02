@@ -11,7 +11,7 @@ int main(int argc,char** argv){
 	int send_data = rank;
 	int recv_data[size];
 
-	MPI_Gather(&send_dat,1,MPI_INT,recv_data,1,MPI_INT,0,MPI_COMM_WORLD);
+	MPI_Gather(&send_data,1,MPI_INT,recv_data,1,MPI_INT,0,MPI_COMM_WORLD);
 
 	if(rank == 0){
 		printf("Gathered data at root process: ");
